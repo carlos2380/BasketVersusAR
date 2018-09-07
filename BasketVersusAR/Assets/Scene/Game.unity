@@ -817,7 +817,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!114 &1689054565
 MonoBehaviour:
@@ -875,6 +875,11 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: 008c0e9ccf84f814ea3cbe4e33ad71c8,
         type: 2}
+    - target: {fileID: 23688828419759504, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9940da7443ead7f48800874a229ebc26, type: 2}
     m_RemovedComponents:
     - {fileID: 54608155994458750, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
