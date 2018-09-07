@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
 
+using Vuforia;
 public class CtrlBall : MonoBehaviour
 {
     private Rigidbody rigidBody;
