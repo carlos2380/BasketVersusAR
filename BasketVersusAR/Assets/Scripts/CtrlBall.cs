@@ -15,7 +15,7 @@ public class CtrlBall : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    rigidBody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>();
         initPosition = transform.position;
 	    initRotation = transform.rotation;
         rigidBody.AddForce(0f, 0, 100f);
