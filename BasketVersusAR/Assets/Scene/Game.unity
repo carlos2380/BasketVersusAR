@@ -599,7 +599,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 0.001, z: 10}
-  m_Center: {x: 0, y: -1, z: 0}
+  m_Center: {x: 0, y: -2, z: 0}
 --- !u!1 &1159215794
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: routeMaterial
+  m_Name: caixaMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -788,7 +788,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 87b867e660a94e379897de13e8ffe22b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 610d78ec9dc94211b0954dbb329e678a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -819,6 +819,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1689054565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689054559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85968bb8ada34d4fa178ef1278908aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1862820300
 Prefab:
   m_ObjectHideFlags: 0
@@ -832,11 +843,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4428340944072396, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.628
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 4428340944072396, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.065
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 4428340944072396, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -858,6 +869,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 135227911899911574, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 008c0e9ccf84f814ea3cbe4e33ad71c8,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 54608155994458750, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
