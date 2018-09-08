@@ -20,6 +20,14 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
+    #region CUSTOM_VARIABLES
+    [HideInInspector]
+    public bool isUsed = false;
+
+    private CtrlGame ctrlGame;
+    private SelectPlayers selectPlayers;
+    #endregion
+
     #region UNTIY_MONOBEHAVIOUR_METHODS
 
     protected virtual void Start()
@@ -27,9 +35,14 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+        GameObject CtrlGameObj = GameObject.FindGameObjectWithTag("CtrlGame");
+        ctrlGame = CtrlGameObj.GetComponent<CtrlGame>();
+        selectPlayers = CtrlGameObj.GetComponent<SelectPlayers>();
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
+
+  
 
     #region PUBLIC_METHODS
 
@@ -45,6 +58,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
+            if (ctrlGame.gameState == CtrlGame.GameState.SelectPlayer)
+            {
+                selectPlayers.targetApearForSelect(gameObject, isUsed);
+            }
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             OnTrackingFound();
         }
