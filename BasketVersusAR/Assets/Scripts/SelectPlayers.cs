@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectPlayers : MonoBehaviour
 {
+    public Text numPlayer;
     private GameObject player1;
     private GameObject player2;
     private CtrlGame ctrlGame;
     private bool player1Selected = false;
-    
 
     // Use this for initialization
     void Start ()
@@ -35,6 +36,7 @@ public class SelectPlayers : MonoBehaviour
             if (player1Selected == false)
             {
                 generatePlayerWithTrack(0, trackableObject);
+                numPlayer.text = "2";
                 player1Selected = true;
             }
             else

@@ -12,6 +12,7 @@ public class CtrlGame : MonoBehaviour {
 
     public GameObject panelSelect;
     public GameObject panelGame;
+    public GameObject tarjetTacks;
     [HideInInspector]
     public GameState gameState;
     private GameObject ball;
@@ -25,11 +26,6 @@ public class CtrlGame : MonoBehaviour {
         ball = GameObject.FindGameObjectWithTag("Ball");
         ball.SetActive(false);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void endSelection()
     {
@@ -37,5 +33,7 @@ public class CtrlGame : MonoBehaviour {
         panelGame.SetActive(true);
         ball.SetActive(true);
         gameState = GameState.Playing;
+        tarjetTacks.SetActive(false);
+        GetComponent<SelectPlayers>().enabled = false;
     }
 }

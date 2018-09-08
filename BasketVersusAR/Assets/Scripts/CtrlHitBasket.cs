@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CtrlHitBasket : MonoBehaviour
 {
@@ -10,11 +11,22 @@ public class CtrlHitBasket : MonoBehaviour
     private TriggerBasket belowTriggerBasket;
     private bool overTriggerActive = false;
     private bool belowTriggerActive = false;
+    private int score = 0;
+    private Text scoreText;
 
     private void Start()
     {
         overTriggerBasket = overTriggerGameObj.GetComponent<TriggerBasket>();
         belowTriggerBasket = belowTriggerGameObj.GetComponent<TriggerBasket>();
+        if (tag == "Player1")
+        {
+            scoreText = GameObject.FindGameObjectWithTag("ScorePlayer1").GetComponent<Text>();
+        }
+        else 
+        {
+            scoreText = GameObject.FindGameObjectWithTag("ScorePlayer2").GetComponent<Text>();
+        }
+
     }
 
     public void triggerChanged()
@@ -23,7 +35,8 @@ public class CtrlHitBasket : MonoBehaviour
         {
             if (belowTriggerBasket.triggerActive == true)
             {
-                Debug.Log("BASKET!!!");
+                ++score;
+                scoreText.text = score.ToString();
             }
         }
         overTriggerActive = overTriggerBasket.triggerActive;

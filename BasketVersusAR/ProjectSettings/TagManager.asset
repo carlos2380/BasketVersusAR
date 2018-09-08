@@ -8,6 +8,8 @@ TagManager:
   - CtrlGame
   - Player1
   - Player2
+  - ScorePlayer1
+  - ScorePlayer2
   layers:
   - Default
   - TransparentFX
