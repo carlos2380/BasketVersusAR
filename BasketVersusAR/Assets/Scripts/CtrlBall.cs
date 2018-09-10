@@ -31,13 +31,18 @@ public class CtrlBall : MonoBehaviour
 
 	    if (transform.position.y < -3f || timer < 0f)
 	    {
-	        timer = timeToInit;
-	        transform.position = initPosition;
-	        transform.SetPositionAndRotation(initPosition, initRotation);
-
-            physicMaterial.bounciness = Random.Range(0.8f, 0.9f);
-	        rigidBody.velocity = Vector3.zero;
-            rigidBody.AddForce(Random.Range(-30f, 30f), 0f, 100f);
+	        respown();
         }
 	}
+
+    public void respown()
+    {
+        timer = timeToInit;
+        transform.position = initPosition;
+        transform.SetPositionAndRotation(initPosition, initRotation);
+
+        physicMaterial.bounciness = Random.Range(0.85f, 0.98f);
+        rigidBody.velocity = Vector3.zero;
+        rigidBody.AddForce(Random.Range(-30f, 30f), 0f, 100f);
+    }
 }

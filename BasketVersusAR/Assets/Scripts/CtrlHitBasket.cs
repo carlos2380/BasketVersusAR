@@ -13,6 +13,8 @@ public class CtrlHitBasket : MonoBehaviour
     private bool belowTriggerActive = false;
     private int score = 0;
     private Text scoreText;
+    private int scoreToWin;
+    private CtrlGame ctrlGame;
 
     private void Start()
     {
@@ -26,7 +28,7 @@ public class CtrlHitBasket : MonoBehaviour
         {
             scoreText = GameObject.FindGameObjectWithTag("ScorePlayer2").GetComponent<Text>();
         }
-
+        ctrlGame = GameObject.FindGameObjectWithTag("CtrlGame").GetComponent<CtrlGame>();
     }
 
     public void triggerChanged()
@@ -37,6 +39,11 @@ public class CtrlHitBasket : MonoBehaviour
             {
                 ++score;
                 scoreText.text = score.ToString();
+                if (ctrlGame.scoreToWin == score)
+                {
+                    string playerNum = tag == "Player1" ? "1" : "2";
+                    ctrlGame.endGame(playerNum);
+                }
             }
         }
         overTriggerActive = overTriggerBasket.triggerActive;
