@@ -7,12 +7,13 @@ public class CtrlHitBasket : MonoBehaviour
 {
     public GameObject overTriggerGameObj;
     public GameObject belowTriggerGameObj;
+    public Text scoreText;
     private TriggerBasket overTriggerBasket;
     private TriggerBasket belowTriggerBasket;
     private bool overTriggerActive = false;
     private bool belowTriggerActive = false;
     private int score = 0;
-    private Text scoreText;
+   
     private int scoreToWin;
     private CtrlGame ctrlGame;
 
@@ -20,14 +21,6 @@ public class CtrlHitBasket : MonoBehaviour
     {
         overTriggerBasket = overTriggerGameObj.GetComponent<TriggerBasket>();
         belowTriggerBasket = belowTriggerGameObj.GetComponent<TriggerBasket>();
-        if (tag == "Player1")
-        {
-            scoreText = GameObject.FindGameObjectWithTag("ScorePlayer1").GetComponent<Text>();
-        }
-        else 
-        {
-            scoreText = GameObject.FindGameObjectWithTag("ScorePlayer2").GetComponent<Text>();
-        }
         ctrlGame = GameObject.FindGameObjectWithTag("CtrlGame").GetComponent<CtrlGame>();
     }
 
