@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SelectPlayers : MonoBehaviour
 {
     public Text numPlayer;
+    public Image BackgroundNumPlayer;
     private GameObject player1;
     private GameObject player2;
     private CtrlGame ctrlGame;
@@ -38,6 +39,7 @@ public class SelectPlayers : MonoBehaviour
                 generatePlayerWithTrack(0, trackableObject);
                 numPlayer.text = "2";
                 player1Selected = true;
+                BackgroundNumPlayer.color = Color.red;
             }
             else
             {

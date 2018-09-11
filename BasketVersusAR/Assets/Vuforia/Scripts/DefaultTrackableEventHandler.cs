@@ -35,9 +35,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
-        GameObject CtrlGameObj = GameObject.FindGameObjectWithTag("CtrlGame");
-        ctrlGame = CtrlGameObj.GetComponent<CtrlGame>();
-        selectPlayers = CtrlGameObj.GetComponent<SelectPlayers>();
+        GameObject ctrlGameObj = GameObject.FindGameObjectWithTag("CtrlGame");
+        GameObject ctrlUI = GameObject.FindGameObjectWithTag("CtrlUI");
+        ctrlGame = ctrlGameObj.GetComponent<CtrlGame>();
+        selectPlayers = ctrlUI.GetComponent<SelectPlayers>();
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
