@@ -42,10 +42,15 @@ public class CtrlGame : MonoBehaviour {
     {
         panelSelect.SetActive(false);
         panelGame.SetActive(true);
-        ball.SetActive(true);
         gameState = GameState.Playing;
         tarjetTacks.SetActive(false);
         gamePanel.appearScore();
+        gamePanel.startCountDown();
+    }
+
+    public void whenFinishCount()
+    {
+        ball.SetActive(true);
         ball.GetComponent<CtrlBall>().respown();
     }
 
