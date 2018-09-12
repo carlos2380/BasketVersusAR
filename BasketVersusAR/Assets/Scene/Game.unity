@@ -2442,6 +2442,31 @@ Prefab:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54792221120595094, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 54792221120595094, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777529708008742, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: forceTorque.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777529708008742, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: forceTorque.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777529708008742, guid: 6251c5d50745e7340b142e12b243f84d,
+        type: 2}
+      propertyPath: forceTorque.z
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6251c5d50745e7340b142e12b243f84d, type: 2}
   m_IsPrefabParent: 0
