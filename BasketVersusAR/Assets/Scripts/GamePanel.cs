@@ -10,6 +10,8 @@ public class GamePanel : MonoBehaviour
     public GameObject scoreLeft;
     public GameObject scoreRight;
     public GameObject counter;
+    public GameObject winPlayer1;
+    public GameObject winPlayer2;
     public Text scorePlayer1;
     public Text scorePlayer2;
     public Text counterNum;
@@ -81,5 +83,14 @@ public class GamePanel : MonoBehaviour
                 ctrlGame.whenFinishCount();
                 break;
         }
+    }
+
+    public void player1Win()
+    {
+        winPlayer1.SetActive(true);
+    }
+    public void player2Win()
+    {
+        winPlayer2.SetActive(true);
     }
 }

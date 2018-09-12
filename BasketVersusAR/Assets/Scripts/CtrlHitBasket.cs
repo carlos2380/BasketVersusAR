@@ -34,8 +34,8 @@ public class CtrlHitBasket : MonoBehaviour
             gamePanel.setScore(playerEnum, score.ToString());
             if (ctrlGame.scoreToWin == score)
             {
-                string playerNum = tag == "Player1" ? "1" : "2";
-                ctrlGame.endGame(playerNum);
+               
+                ctrlGame.endGame(tag);
             }
         }
         if (Input.GetKeyDown(KeyCode.S) && tag == "Player2")
@@ -44,8 +44,8 @@ public class CtrlHitBasket : MonoBehaviour
             gamePanel.setScore(playerEnum, score.ToString());
             if (ctrlGame.scoreToWin == score)
             {
-                string playerNum = tag == "Player1" ? "1" : "2";
-                ctrlGame.endGame(playerNum);
+                
+                ctrlGame.endGame(tag);
             }
         }
     }
@@ -60,8 +60,7 @@ public class CtrlHitBasket : MonoBehaviour
                 gamePanel.setScore(playerEnum, score.ToString());
                 if (ctrlGame.scoreToWin == score)
                 {
-                    string playerNum = tag == "Player1" ? "1" : "2";
-                    ctrlGame.endGame(playerNum);
+                    ctrlGame.endGame(tag);
                 }
             }
         }

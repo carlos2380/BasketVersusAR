@@ -9,8 +9,7 @@ public class CtrlGame : MonoBehaviour {
     public enum GameState
     {
         SelectPlayer,
-        Playing,
-        End
+        Playing
     };
 
     public GameObject panelSelect;
@@ -54,12 +53,17 @@ public class CtrlGame : MonoBehaviour {
         ball.GetComponent<CtrlBall>().respown();
     }
 
-    public void endGame(String playerNum)
+    public void endGame(String tag)
     {
-        gameState = GameState.End;
-        panelGame.SetActive(false);
-        panelWin.SetActive(true);
-        namePlayerWin.text = playerNum;
+        switch (tag)
+        {
+            case "Player1":
+                gamePanel.player1Win();
+                break;
+            case "Player2":
+                gamePanel.player2Win();
+                break;
+        }
         ball.SetActive(false);
     }
 }
