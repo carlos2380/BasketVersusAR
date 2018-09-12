@@ -682,8 +682,9 @@ GameObject:
   - component: {fileID: 511571007}
   - component: {fileID: 511571009}
   - component: {fileID: 511571008}
+  - component: {fileID: 511571010}
   m_Layer: 5
-  m_Name: ScoreLight
+  m_Name: ScoreLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,6 +743,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511571006}
+--- !u!95 &511571010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 511571006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba4f1b18261c6ff47880566129ba543d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &535644067
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &606203606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1182,6 +1200,7 @@ GameObject:
   - component: {fileID: 851325361}
   - component: {fileID: 851325363}
   - component: {fileID: 851325362}
+  - component: {fileID: 851325364}
   m_Layer: 5
   m_Name: ScoreRight
   m_TagString: Untagged
@@ -1242,6 +1261,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851325360}
+--- !u!95 &851325364
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 851325360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a40da1ed020b31478ba7ee7cb9c3ada, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!21 &882665203
 Material:
   serializedVersion: 6
@@ -2854,6 +2890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd47dcbb9eb1b14da55364484af07c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreLeft: {fileID: 511571006}
+  scoreRight: {fileID: 851325360}
   scorePlayer1: {fileID: 4749061}
   scorePlayer2: {fileID: 2077505463}
 --- !u!1 &2128397270

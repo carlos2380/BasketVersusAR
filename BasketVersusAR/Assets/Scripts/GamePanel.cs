@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GamePanel : MonoBehaviour
 {
+    public GameObject scoreLeft;
+    public GameObject scoreRight;
     public Text scorePlayer1;
     public Text scorePlayer2;
 
@@ -20,11 +22,12 @@ public class GamePanel : MonoBehaviour
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+
+    public void appearScore()
+    {
+        scoreLeft.GetComponent<Animator>().Play("Appear");
+        scoreRight.GetComponent<Animator>().Play("Appear");
+    }
 
     public void restartScore()
     {

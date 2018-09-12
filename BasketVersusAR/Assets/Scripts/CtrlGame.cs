@@ -24,6 +24,7 @@ public class CtrlGame : MonoBehaviour {
     [Header("PanelWin")]
     public GameObject panelWin;
     public Text namePlayerWin;
+    private GamePanel gamePanel;
 
     // Use this for initialization
     void Start ()
@@ -34,6 +35,7 @@ public class CtrlGame : MonoBehaviour {
         panelWin.SetActive(false);
         ball = GameObject.FindGameObjectWithTag("Ball");
         ball.SetActive(false);
+        gamePanel = GameObject.FindGameObjectWithTag("CtrlUI").GetComponent<GamePanel>();
     }
 
     public void endSelection()
@@ -43,6 +45,7 @@ public class CtrlGame : MonoBehaviour {
         ball.SetActive(true);
         gameState = GameState.Playing;
         tarjetTacks.SetActive(false);
+        gamePanel.appearScore();
         ball.GetComponent<CtrlBall>().respown();
     }
 
