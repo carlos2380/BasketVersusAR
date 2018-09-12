@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class CtrlHitBasket : MonoBehaviour
@@ -21,6 +22,7 @@ public class CtrlHitBasket : MonoBehaviour
         overTriggerBasket = overTriggerGameObj.GetComponent<TriggerBasket>();
         belowTriggerBasket = belowTriggerGameObj.GetComponent<TriggerBasket>();
         ctrlGame = GameObject.FindGameObjectWithTag("CtrlGame").GetComponent<CtrlGame>();
+        ctrlGame.restart += restartPoints;
         gamePanel = GameObject.FindGameObjectWithTag("CtrlUI").GetComponent<GamePanel>();
         playerEnum = tag == "Player1" ? GamePanel.Player.Player1 : GamePanel.Player.Player2;
     }
@@ -74,5 +76,10 @@ public class CtrlHitBasket : MonoBehaviour
         overTriggerActive = false;
         belowTriggerActive = false;
     }
-    
+
+    private void restartPoints()
+    {
+        score = 0;
+    }
+
 }

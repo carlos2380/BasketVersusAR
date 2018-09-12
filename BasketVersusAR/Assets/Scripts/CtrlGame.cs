@@ -19,10 +19,6 @@ public class CtrlGame : MonoBehaviour {
     [HideInInspector]
     public GameState gameState;
     private GameObject ball;
-
-    [Header("PanelWin")]
-    public GameObject panelWin;
-    public Text namePlayerWin;
     private GamePanel gamePanel;
 
     // Use this for initialization
@@ -31,7 +27,6 @@ public class CtrlGame : MonoBehaviour {
         gameState = GameState.SelectPlayer;
         panelSelect.SetActive(true);
         panelGame.SetActive(false);
-        panelWin.SetActive(false);
         ball = GameObject.FindGameObjectWithTag("Ball");
         ball.SetActive(false);
         gamePanel = GameObject.FindGameObjectWithTag("CtrlUI").GetComponent<GamePanel>();
@@ -65,5 +60,24 @@ public class CtrlGame : MonoBehaviour {
                 break;
         }
         ball.SetActive(false);
+        StartCoroutine(restarGame());
+    }
+
+    public delegate void RestartEvent();
+    public event RestartEvent restart;
+    protected virtual void throwRestartEvent()
+    {
+        RestartEvent restertEvent = restart;
+        if (restertEvent != null)
+        {
+            restertEvent();
+        }
+    }
+
+    private IEnumerator restarGame()
+    {
+        throwRestartEvent();
+        yield return new WaitForSeconds(5);
+        gamePanel.restart();
     }
 }

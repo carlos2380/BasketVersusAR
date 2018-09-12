@@ -31,10 +31,15 @@ public class GamePanel : MonoBehaviour
     }
 
   
-    public void restartScore()
+    public void restart()
     {
         scorePlayer1.text = "0";
         scorePlayer2.text = "0";
+        counterNum.fontSize = 160;
+        winPlayer1.SetActive(false);
+        winPlayer2.SetActive(false);
+        counter.SetActive(true);
+        startCountDown();
     }
 
     public void setScore(Player playerEnum, string scoreStr)
@@ -93,4 +98,6 @@ public class GamePanel : MonoBehaviour
     {
         winPlayer2.SetActive(true);
     }
+
+
 }
