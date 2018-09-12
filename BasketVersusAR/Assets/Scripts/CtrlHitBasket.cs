@@ -17,6 +17,7 @@ public class CtrlHitBasket : MonoBehaviour
     private CtrlGame ctrlGame;
     private GamePanel gamePanel;
     private GamePanel.Player playerEnum;
+    private AudioSource hit;
     private void Start()
     {
         overTriggerBasket = overTriggerGameObj.GetComponent<TriggerBasket>();
@@ -25,6 +26,7 @@ public class CtrlHitBasket : MonoBehaviour
         ctrlGame.restart += restartPoints;
         gamePanel = GameObject.FindGameObjectWithTag("CtrlUI").GetComponent<GamePanel>();
         playerEnum = tag == "Player1" ? GamePanel.Player.Player1 : GamePanel.Player.Player2;
+        hit = ctrlGame.basketPoint;
     }
 
     private void Update()
@@ -58,6 +60,7 @@ public class CtrlHitBasket : MonoBehaviour
         {
             if (belowTriggerBasket.triggerActive == true)
             {
+                hit.Play();
                 ++score;
                 gamePanel.setScore(playerEnum, score.ToString());
                 if (ctrlGame.scoreToWin == score)

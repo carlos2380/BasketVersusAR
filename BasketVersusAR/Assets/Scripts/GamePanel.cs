@@ -16,6 +16,9 @@ public class GamePanel : MonoBehaviour
     public Text scorePlayer2;
     public Text counterNum;
     private CtrlGame ctrlGame;
+    [Header("Sounds")]
+    public AudioSource countDown;
+    public AudioSource start;
 
     public enum Player
     {
@@ -71,19 +74,23 @@ public class GamePanel : MonoBehaviour
         {
             case "3":
                 counterNum.text = "2";
+                countDown.Play();
                 counterNum.GetComponent<Animator>().Play("Zoom");
                 break;
             case "2":
                 counterNum.text = "1";
+                countDown.Play();
                 counterNum.GetComponent<Animator>().Play("Zoom");
                 break;
             case "1":
                 counterNum.text = "START";
+                countDown.Play();
                 counterNum.fontSize = 35;
                 counterNum.GetComponent<Animator>().Play("Zoom");
                 break;
             case "START":
                 counterNum.text = "3";
+                start.Play();
                 counter.SetActive(false);
                 ctrlGame.whenFinishCount();
                 break;

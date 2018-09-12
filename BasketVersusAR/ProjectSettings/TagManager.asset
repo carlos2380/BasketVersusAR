@@ -11,6 +11,10 @@ TagManager:
   - ScorePlayer1
   - ScorePlayer2
   - CtrlUI
+  - Floor
+  - Ring
+  - Board
+  - Net
   layers:
   - Default
   - TransparentFX

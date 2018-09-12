@@ -15,6 +15,12 @@ public class CtrlBall : MonoBehaviour
     private PhysicMaterial physicMaterial;
     private Rigidbody rigidbody;
 
+    [Header("Sounds")]
+    public AudioSource bounce;
+    public AudioSource board;
+    public AudioSource ring;
+    public AudioSource net;
+
     // Use this for initialization
     void Start ()
 	{
@@ -49,5 +55,24 @@ public class CtrlBall : MonoBehaviour
         physicMaterial.bounciness = Random.Range(0.85f, 0.98f);
         rigidBody.velocity = Vector3.zero;
         rigidBody.AddForce(Random.Range(-30f, 30f), 0f, 100f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "MainCamera":
+                bounce.Play();
+                break;
+            case "Ring":
+                ring.Play();
+                break;
+            case "Board":
+                board.Play();
+                break;
+            case "Net":
+                net.Play();
+                break;
+        }
     }
 }

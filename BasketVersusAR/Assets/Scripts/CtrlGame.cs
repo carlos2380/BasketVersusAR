@@ -21,6 +21,13 @@ public class CtrlGame : MonoBehaviour {
     private GameObject ball;
     private GamePanel gamePanel;
 
+    [Header("Sound")]
+    public AudioSource musicGame;
+    public AudioSource abmientGame;
+    public AudioSource basketPoint;
+    public AudioSource finishMatch;
+    public AudioSource countDown;
+
     // Use this for initialization
     void Start ()
     {
@@ -44,12 +51,14 @@ public class CtrlGame : MonoBehaviour {
 
     public void whenFinishCount()
     {
+        abmientGame.Play();
         ball.SetActive(true);
         ball.GetComponent<CtrlBall>().respown();
     }
 
     public void endGame(String tag)
     {
+        finishMatch.Play();
         switch (tag)
         {
             case "Player1":
@@ -76,6 +85,7 @@ public class CtrlGame : MonoBehaviour {
 
     private IEnumerator restarGame()
     {
+        abmientGame.Stop();
         throwRestartEvent();
         yield return new WaitForSeconds(5);
         gamePanel.restart();
