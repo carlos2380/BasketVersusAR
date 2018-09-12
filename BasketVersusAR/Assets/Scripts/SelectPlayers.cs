@@ -15,7 +15,7 @@ public class SelectPlayers : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        ctrlGame = gameObject.GetComponent<CtrlGame>();
+        ctrlGame = GameObject.FindGameObjectWithTag("CtrlGame").GetComponent<CtrlGame>();
         player1 = GameObject.FindGameObjectWithTag("Player1");
 	    player2 = GameObject.FindGameObjectWithTag("Player2");
     }

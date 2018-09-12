@@ -282,7 +282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &178147031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1306,19 +1306,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114804429581580180, guid: 279e44b0b449d8243aa883d45a646d93,
-        type: 2}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 4749061}
     - target: {fileID: 1565872325279944, guid: 279e44b0b449d8243aa883d45a646d93, type: 2}
       propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565872325279944, guid: 279e44b0b449d8243aa883d45a646d93, type: 2}
+      propertyPath: m_TagString
       value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 1565872325279944, guid: 279e44b0b449d8243aa883d45a646d93, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23446442119443620, guid: 279e44b0b449d8243aa883d45a646d93,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e71b0157f0005e743b4f1938a42cd919, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 279e44b0b449d8243aa883d45a646d93, type: 2}
   m_IsPrefabParent: 0
@@ -1520,52 +1524,13 @@ Prefab:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 114804429581580180, guid: 279e44b0b449d8243aa883d45a646d93,
-        type: 2}
-      propertyPath: ScorePlayer1
-      value: 
-      objectReference: {fileID: 4749059}
-    - target: {fileID: 114804429581580180, guid: 279e44b0b449d8243aa883d45a646d93,
-        type: 2}
-      propertyPath: ScorePlayer2
-      value: 
-      objectReference: {fileID: 2077505461}
     - target: {fileID: 1565872325279944, guid: 279e44b0b449d8243aa883d45a646d93, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114804429581580180, guid: 279e44b0b449d8243aa883d45a646d93,
-        type: 2}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 2077505463}
-    - target: {fileID: 23446442119443620, guid: 279e44b0b449d8243aa883d45a646d93,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b864847df21853e42ac5a9a72ec14fed, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 279e44b0b449d8243aa883d45a646d93, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1289228567 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1003084467611334, guid: b8e500af0189854489b60725c889aec1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1551108169}
---- !u!64 &1289228583
-MeshCollider:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1289228567}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300004, guid: d38571fdbdd089548b762ec583ec72d4, type: 3}
 --- !u!21 &1294468681
 Material:
   serializedVersion: 6
@@ -1764,7 +1729,7 @@ MonoBehaviour:
   panelSelect: {fileID: 606203605}
   panelGame: {fileID: 178147030}
   tarjetTacks: {fileID: 1137879559}
-  scoreToWin: 1
+  scoreToWin: 3
   gameState: 0
   panelWin: {fileID: 606362661}
   namePlayerWin: {fileID: 1987053028}
@@ -1922,11 +1887,10 @@ Prefab:
       propertyPath: m_SphereColliders.Array.data[0].first
       value: 
       objectReference: {fileID: 175427211}
-    - target: {fileID: 114320429226516678, guid: b8e500af0189854489b60725c889aec1,
-        type: 2}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 4749061}
+    - target: {fileID: 1998098874692480, guid: b8e500af0189854489b60725c889aec1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8e500af0189854489b60725c889aec1, type: 2}
   m_IsPrefabParent: 0
@@ -2845,6 +2809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081142988}
   - component: {fileID: 2081142987}
+  - component: {fileID: 2081142989}
   m_Layer: 0
   m_Name: CtrlUI
   m_TagString: CtrlUI
@@ -2878,6 +2843,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081142989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081142986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd47dcbb9eb1b14da55364484af07c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePlayer1: {fileID: 4749061}
+  scorePlayer2: {fileID: 2077505463}
 --- !u!1 &2128397270
 GameObject:
   m_ObjectHideFlags: 0

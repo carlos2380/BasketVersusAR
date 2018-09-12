@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1578530696384596
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e71b0157f0005e743b4f1938a42cd919, type: 2}
+  - {fileID: 2100000, guid: b864847df21853e42ac5a9a72ec14fed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -838,7 +838,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overTriggerGameObj: {fileID: 1193340267363366}
   belowTriggerGameObj: {fileID: 1056403676947478}
-  scoreText: {fileID: 0}
 --- !u!137 &137649707030548680
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

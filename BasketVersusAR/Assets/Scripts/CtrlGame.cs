@@ -43,7 +43,6 @@ public class CtrlGame : MonoBehaviour {
         ball.SetActive(true);
         gameState = GameState.Playing;
         tarjetTacks.SetActive(false);
-        GetComponent<SelectPlayers>().enabled = false;
         ball.GetComponent<CtrlBall>().respown();
     }
 
