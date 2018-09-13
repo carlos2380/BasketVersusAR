@@ -26,7 +26,6 @@ public class CtrlGame : MonoBehaviour {
     public AudioSource abmientGame;
     public AudioSource basketPoint;
     public AudioSource finishMatch;
-    public AudioSource countDown;
 
     // Use this for initialization
     void Start ()
