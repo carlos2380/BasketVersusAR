@@ -2201,6 +2201,7 @@ GameObject:
   - component: {fileID: 1076160719}
   - component: {fileID: 1076160720}
   - component: {fileID: 1076160721}
+  - component: {fileID: 1076160722}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: Floor
@@ -2225,7 +2226,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076160713}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
@@ -2324,6 +2325,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 0.001, z: 15}
   m_Center: {x: 0, y: -0.95, z: 0}
+--- !u!114 &1076160722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076160713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824921a1efeda644eae9e3c464797c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086593716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,7 +3058,6 @@ MonoBehaviour:
   abmientGame: {fileID: 1406818900}
   basketPoint: {fileID: 1406818902}
   finishMatch: {fileID: 1406818901}
-  countDown: {fileID: 0}
 --- !u!82 &1406818900
 AudioSource:
   m_ObjectHideFlags: 0

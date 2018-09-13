@@ -54,6 +54,7 @@ public class DefaultInitializationErrorHandler : MonoBehaviour
 
     void Start()
     {
+        GetComponent<VuforiaBehaviour>().enabled = true;
         SetupGUIStyles();
     }
 
