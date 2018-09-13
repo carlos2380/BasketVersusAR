@@ -2,9 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Vuforia;
 
 public class CtrlGame : MonoBehaviour {
+
+    public delegate void RestartEvent();
+    public event RestartEvent restart;
 
     public enum GameState
     {
@@ -26,6 +31,7 @@ public class CtrlGame : MonoBehaviour {
     public AudioSource abmientGame;
     public AudioSource basketPoint;
     public AudioSource finishMatch;
+    public AudioSource click;
 
     // Use this for initialization
     void Start ()
@@ -71,8 +77,7 @@ public class CtrlGame : MonoBehaviour {
         StartCoroutine(restarGame());
     }
 
-    public delegate void RestartEvent();
-    public event RestartEvent restart;
+    
     protected virtual void throwRestartEvent()
     {
         RestartEvent restertEvent = restart;
@@ -80,6 +85,12 @@ public class CtrlGame : MonoBehaviour {
         {
             restertEvent();
         }
+    }
+
+    public void home()
+    {
+        click.Play();
+        SceneManager.LoadScene("Menu");
     }
 
     private IEnumerator restarGame()
