@@ -26,11 +26,20 @@ public class CtrlMenu : MonoBehaviour
         panelTutorial.SetActive(false);
     }
 	
-    public void startGame()
+    public void startGame1Player()
     {
         click.Play();
+        NumPlayers.numPlayers = 1;
         SceneManager.LoadScene("Game");
     }
+
+    public void startGame2Player()
+    {
+        click.Play();
+        NumPlayers.numPlayers = 2;
+        SceneManager.LoadScene("Game");
+    }
+
 
     public void home()
     {

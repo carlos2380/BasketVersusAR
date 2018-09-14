@@ -60,7 +60,15 @@ public class GamePanel : MonoBehaviour
     public void appearScore()
     {
         scoreLeft.GetComponent<Animator>().Play("Appear");
-        scoreRight.GetComponent<Animator>().Play("Appear");
+        if (NumPlayers.numPlayers == 2)
+        {
+            scoreRight.GetComponent<Animator>().Play("Appear");
+        }
+        else
+        {
+            scoreRight.SetActive(false);
+        }
+        
     }
 
     public void startCountDown()

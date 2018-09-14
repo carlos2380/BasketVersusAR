@@ -34,7 +34,12 @@ public class SelectPlayers : MonoBehaviour
         else
         {
             trackableObject.GetComponent<DefaultTrackableEventHandler>().isUsed = true;
-            if (player1Selected == false)
+            if (NumPlayers.numPlayers == 1)
+            {
+                generatePlayerWithTrack(0, trackableObject);
+                ctrlGame.endSelection();
+            }
+            else if (player1Selected == false )
             {
                 generatePlayerWithTrack(0, trackableObject);
                 numPlayer.text = "2";
