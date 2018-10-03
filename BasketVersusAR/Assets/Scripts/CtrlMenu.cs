@@ -99,7 +99,7 @@ public class CtrlMenu : MonoBehaviour
     public void downloadImage()
     {
         click.Play();
-        Application.OpenURL("https://www.yahoo.com/");
+        Application.OpenURL("https://github.com/carlos2380/BasketVersusAR/raw/master/Tarjets/Tarjets.pdf");
     }
 
     public void selectPanel()
