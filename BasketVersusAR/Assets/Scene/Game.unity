@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 259867472}
   - component: {fileID: 259867471}
   m_Layer: 0
-  m_Name: caixa
+  m_Name: tarjet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,15 +711,15 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: caixa
+  mTrackableName: Lobo
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/BasketDB.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.7231834
+  mAspectRatio: 1.048443
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.7231834
+  mHeight: 1.048443
 --- !u!1 &276268063 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1343179999095798, guid: 279e44b0b449d8243aa883d45a646d93,
@@ -1144,7 +1144,7 @@ Transform:
   m_GameObject: {fileID: 259867470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -394.79584, y: -142.87056, z: -250.86063}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.048443, y: 1.048443, z: 1.048443}
   m_Children:
   - {fileID: 648037525}
   - {fileID: 473558456}
@@ -1429,7 +1429,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.3615917}
+      m_Extent: {x: 0.47689766, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1482,7 +1482,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000008c22b9be00000000ffff7f3f000000000000000000000000000000bf000000008c22b93e00000000ffff7f3f00000000000000000000803f0000003f000000008c22b9be00000000ffff7f3f000000000000803f000000000000003f000000008c22b93e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: ee2bf4be00000000000000bf000000000000803f000000000000000000000000ee2bf4be000000000000003f000000000000803f00000000000000000000803fee2bf43e00000000000000bf000000000000803f000000000000803f00000000ee2bf43e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2039,7 +2039,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: caixaMaterial
+  m_Name: LoboMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2052,7 +2052,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 610d78ec9dc94211b0954dbb329e678a, type: 3}
+        m_Texture: {fileID: 2800000, guid: bdb51e64f2eb4b75a29462a2c654aa64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2770,7 +2770,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: routeMaterial
+  m_Name: DragonMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2783,7 +2783,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 87b867e660a94e379897de13e8ffe22b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5d6dd8043ee34aebac7dfcc412e74c1b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2806,7 +2806,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.4867675}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2859,7 +2859,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf000000009739f9be000000000000803f000000000000000000000000000000bf000000009739f93e000000000000803f00000000000000000000803f0000003f000000009739f9be000000000000803f000000000000803f000000000000003f000000009739f93e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -3514,7 +3514,7 @@ GameObject:
   - component: {fileID: 1416280047}
   - component: {fileID: 1416280046}
   m_Layer: 0
-  m_Name: Route
+  m_Name: tarjet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3600,15 +3600,15 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: route
+  mTrackableName: Dragon
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/BasketDB.xml
   mExtendedTracking: 0
-  mAspectRatio: 1
+  mAspectRatio: 0.973535
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1
+  mHeight: 0.973535
 --- !u!1 &1470011751
 GameObject:
   m_ObjectHideFlags: 0
