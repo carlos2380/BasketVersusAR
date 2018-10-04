@@ -10,7 +10,7 @@ public class CtrlBall : MonoBehaviour
     private Rigidbody rigidBody;
     private Vector3 initPosition = new Vector3();
     private Quaternion initRotation = new Quaternion();
-    private const float timeToInit = 5f;
+    private const float timeToInit = 10f;
     private float timer = timeToInit;
     private PhysicMaterial physicMaterial;
     private Rigidbody rigidbody;
@@ -52,9 +52,9 @@ public class CtrlBall : MonoBehaviour
         transform.position = initPosition;
         transform.SetPositionAndRotation(initPosition, initRotation);
         rigidbody.AddTorque(forceTorque);
-        physicMaterial.bounciness = Random.Range(0.85f, 0.98f);
+        physicMaterial.bounciness = Random.Range(0.90f, 0.98f);
         rigidBody.velocity = Vector3.zero;
-        rigidBody.AddForce(Random.Range(-30f, 30f), 0f, 100f);
+        rigidBody.AddForce(Random.Range(-30f, 30f), 0f, 250f);
     }
 
     private void OnTriggerEnter(Collider other)
