@@ -12,6 +12,7 @@ public class CtrlMenu : MonoBehaviour
     public GameObject panelDownload;
     public GameObject panelSelect;
     public GameObject panelEnjoy;
+    public GameObject panelLoading;
 
     [Header("Sounds")]
     public AudioSource musicMenu;
@@ -24,12 +25,15 @@ public class CtrlMenu : MonoBehaviour
         panelMenu.SetActive(true);
         panelAbout.SetActive(false);
         panelTutorial.SetActive(false);
+        panelLoading.SetActive(false);
     }
 	
     public void startGame1Player()
     {
         click.Play();
         NumPlayers.numPlayers = 1;
+        basket.SetActive(false);
+        panelLoading.SetActive(true);
         SceneManager.LoadScene("Game");
     }
 
@@ -37,6 +41,8 @@ public class CtrlMenu : MonoBehaviour
     {
         click.Play();
         NumPlayers.numPlayers = 2;
+        basket.SetActive(false);
+        panelLoading.SetActive(true);
         SceneManager.LoadScene("Game");
     }
 
@@ -48,6 +54,7 @@ public class CtrlMenu : MonoBehaviour
         basket.SetActive(true);
         panelMenu.SetActive(true);
         panelAbout.SetActive(false);
+        panelLoading.SetActive(false);
     }
 
     public void about()
@@ -56,6 +63,7 @@ public class CtrlMenu : MonoBehaviour
         basket.SetActive(false);
         panelMenu.SetActive(false);
         panelAbout.SetActive(true);
+        panelLoading.SetActive(false);
     }
 
     public void email()
@@ -86,6 +94,7 @@ public class CtrlMenu : MonoBehaviour
         panelDownload.SetActive(true);
         panelSelect.SetActive(false);
         panelEnjoy.SetActive(false);
+        panelLoading.SetActive(false);
     }
     
     public void downloadPanel()
@@ -94,6 +103,7 @@ public class CtrlMenu : MonoBehaviour
         panelDownload.SetActive(true);
         panelSelect.SetActive(false);
         panelEnjoy.SetActive(false);
+        panelLoading.SetActive(false);
     }
 
     public void downloadImage()
@@ -108,6 +118,7 @@ public class CtrlMenu : MonoBehaviour
         panelDownload.SetActive(false);
         panelSelect.SetActive(true);
         panelEnjoy.SetActive(false);
+        panelLoading.SetActive(false);
     }
 
     public void enjoyPanel()
@@ -116,6 +127,13 @@ public class CtrlMenu : MonoBehaviour
         panelDownload.SetActive(false);
         panelSelect.SetActive(false);
         panelEnjoy.SetActive(true);
+        panelLoading.SetActive(false);
+    }
+
+    public void exit()
+    {
+        click.Play();
+        Application.Quit();
     }
 
 }
