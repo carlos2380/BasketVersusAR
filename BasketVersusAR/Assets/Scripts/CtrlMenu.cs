@@ -109,7 +109,7 @@ public class CtrlMenu : MonoBehaviour
     public void downloadImage()
     {
         click.Play();
-        Application.OpenURL("https://github.com/carlos2380/BasketVersusAR/raw/master/Tarjets/Tarjets.pdf");
+        Application.OpenURL("https://github.com/carlos2380/BasketVersusAR/blob/master/Targets/Targets.pdf");
     }
 
     public void selectPanel()
