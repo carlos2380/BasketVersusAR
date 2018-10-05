@@ -13,6 +13,7 @@ public class CtrlMenu : MonoBehaviour
     public GameObject panelSelect;
     public GameObject panelEnjoy;
     public GameObject panelLoading;
+    public GameObject panelAdvice;
 
     [Header("Sounds")]
     public AudioSource musicMenu;
@@ -21,13 +22,25 @@ public class CtrlMenu : MonoBehaviour
 
     // Use this for initialization
     void Start () {
+        if (Advice.adviceShow == false)
+        {
+            StartCoroutine(showAdvice());
+        }
+        else
+        {
+            setUpStart();
+        }
+    }
+
+    public void setUpStart()
+    {
         basket.SetActive(true);
         panelMenu.SetActive(true);
+        panelAdvice.SetActive(false);
         panelAbout.SetActive(false);
         panelTutorial.SetActive(false);
         panelLoading.SetActive(false);
     }
-	
     public void startGame1Player()
     {
         click.Play();
@@ -136,4 +149,16 @@ public class CtrlMenu : MonoBehaviour
         Application.Quit();
     }
 
+    IEnumerator showAdvice()
+    {
+        Advice.adviceShow = true;
+        basket.SetActive(false);
+        panelAdvice.SetActive(true);
+        panelMenu.SetActive(false);
+        panelAbout.SetActive(false);
+        panelTutorial.SetActive(true);
+        panelLoading.SetActive(false);
+        yield return new WaitForSeconds(5);
+        setUpStart();
+    }
 }
